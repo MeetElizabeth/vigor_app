@@ -4,6 +4,7 @@ class CreateDashboards < ActiveRecord::Migration
       t.references :users
       t.references :strava_panels
       t.references :fitbit_panels
+      t.references :goals
     end
   end
 end

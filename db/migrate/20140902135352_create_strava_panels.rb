@@ -6,8 +6,8 @@ class CreateStravaPanels < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.float :distance
-      t.interval :moving_time
-      t.interval :elapsed_time
+      t.time :moving_time
+      t.time :elapsed_time
       t.string :type
       t.date :date
       t.integer :calories
