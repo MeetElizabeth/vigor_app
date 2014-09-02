@@ -29,7 +29,10 @@ gem 'spring',        group: :development
 # devise - user auth
 gem 'devise'
 
+# for parsing APIs
 gem 'httparty'
+
+# backbone + handlebars
 gem 'backbars'
 
 # bootstrap
@@ -37,7 +40,7 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer'
 
-# testing
+# testing suite: pry, rspec, capybara, and jasmine
 group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
