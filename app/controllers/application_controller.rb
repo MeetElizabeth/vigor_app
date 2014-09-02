@@ -8,10 +8,10 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << :first_name << :last_name << :birthdate << :email
+    devise_parameter_sanitizer.for(:sign_up) << :first_name << :last_name << :birthdate
 
     devise_parameter_sanitizer.for(:account_update) do |u|
-      u.permit(:first_name, :username, :birthday, :email)
+      u.permit(:first_name, :last_name, :birthdate)
     end
 
   end
