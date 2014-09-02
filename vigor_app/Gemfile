@@ -29,16 +29,26 @@ gem 'spring',        group: :development
 # devise - user auth
 gem 'devise'
 
-gem 'pry-rails'
-
 gem 'httparty'
-
 gem 'backbars'
 
 # bootstrap
 gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'therubyracer'
+
+# testing
+group :development, :test do
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'rspec-rails', '~> 3.0.0'
+  gem 'shoulda-matchers', require: false
+  gem 'rspec-collection_matchers'
+  gem 'capybara', '~> 2.4.0'
+  gem 'selenium-webdriver', '~>2.42.0'
+  gem 'jasmine'
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
