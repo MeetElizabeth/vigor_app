@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :confirmable
 
-  has_one :fitbit_panel, through: :dashboard, dependent: :destroy
-  has_one :strava_panel, through: :dashboard, dependent: :destroy
-  has_many :goals, through: :dashboards, dependent: :destroy
+  has_one :fitbit, through: :dashboard, dependent: :destroy
+  has_one :strava, through: :dashboard, dependent: :destroy
+  has_one :goal, through: :dashboards, dependent: :destroy
 
   validates_presence_of :first_name, :last_name, :email, :password
   validates_uniqueness_of :email

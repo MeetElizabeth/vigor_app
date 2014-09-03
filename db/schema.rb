@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140903180302) do
+ActiveRecord::Schema.define(version: 20140903182011) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140903180302) do
     t.integer "goals_id"
   end
 
-  create_table "fitbit_panels", force: true do |t|
+  create_table "fitbits", force: true do |t|
     t.float   "total_distance"
     t.integer "calories"
     t.integer "steps"
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20140903180302) do
     t.date     "goal_date"
   end
 
-  create_table "strava_panels", force: true do |t|
+  create_table "stravas", force: true do |t|
     t.integer "athlete_id"
     t.integer "activity_id"
     t.string  "name"
